@@ -1,0 +1,109 @@
+<!doctype html>
+
+<!-- Name: Allison Sharpe -->
+<!-- Date: 05-12-15 -->
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title> Projects </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="css/project.css?v=1">
+    <link rel="icon" href="images/icon.png">
+    <!-- end CSS-->
+
+</head>
+
+<body>
+    <div class="content"> <!-- opening div class for "content" -->
+
+        <h4 class="userid"> Welcome User: AllisonDSharpe </h4>
+
+        <div class="dashboard"> <!-- opening class tag for "dashboard" -->
+            <label for="dashboard" class=".dashboard"></label>
+                <input type="submit" id="dashboard" class="masterTooltip" title="Your dashboard" value="Dashboard"/>
+                <a href="index.html" style="text-decoration: none"></a>
+        </div> <!-- closing class tag for "dashboard" -->
+
+        <div class="account"> <!-- opening class tag for "account" -->
+            <label for="account" class=".account"></label>
+                <input type="submit" id="account" class="masterTooltip" title="Your account" value="Account"/>
+                <a href="index.html" style="text-decoration: none"></a>
+        </div> <!-- closing class tag for "account" -->
+
+        <div class="signout"> <!-- opening class tag for "signout" -->
+            <label for="signout" class=".logout"></label>
+                <input type="submit" id="signout" class="masterTooltip" title="Signout" value="Sign out"/>
+                <a href="index.html" style="text-decoration: none"></a>
+        </div> <!-- closing class tag for "signout" -->
+
+        <h2> Welcome to your dashboard </h2>
+
+        <p> Click the option for "Add+" down below to get started </p>
+
+        <div class="masterTooltip" title="Add"> <!-- opening class tag for "masterTooltip" -->
+            <p><a href="#" class="modalClick" id="dialog">Add+</a></p>
+        </div> <!-- closing class tag for "masterTooltip" -->
+
+        <div class="projectList"> <!-- opening class tag for "project list" -->
+            <h2> Current Projects </h2>
+            <div class="projects"> <!-- opening class tag for "projects" -->
+
+            </div> <!-- closing class tag for "projects" -->
+        </div> <!-- closing class tag for "project list" -->
+
+        <div id="overlay"> <!-- opening id tag for "overlay" -->
+            <div id="modal"> <!-- opening id tag for "modal" -->
+                <span class="close"> X </span>
+            <h3 class="header"> Add Project </h3>
+        <div id="add"> <!-- opening id tag for "add" -->
+            <form id="addForm"> <!-- opening form tag -->
+                <label> Project Name: <input name="projectName" type="text" id="projectName" /> </label>
+                <label> Project Description: <input name="projectDescription" type="text" id="projectDescription" /> </label>
+                <label> Project Due Date: <input name="project Due Date" type="text" id="projectDueDate" /> </label>
+                <label for="status" id="status"> Select Status: </label>
+
+                <label class="mystatus">
+                    <div class="normal">Normal</div> <!-- opening and closing class tags for "normal" -->
+                        <input type="radio" name="status" id="normal"> <img src="images/icons/normal.png" width="69" height="75" alt=""></label>
+                <label class="mystatus">
+                    <div class="urgent">Urgent</div> <!-- opening and closing class tags for "urgent" -->
+                        <input type="radio" name="status" id="urgent"> <img src="images/icons/urgent.png" width="69" height="75" alt=""></label>
+                <label class="mystatus">
+                    <div class="delayed">Delayed</div> <!-- opening and closing class tags for "delayed" -->
+                        <input type="radio" name="status" id="delayed"> <img src="images/icons/delayed.png" width="69" height="75" alt=""></label>
+                <label class="mystatus">
+                    <div class="complete">Complete</div> <!-- opening and closing class tags for "complete" -->
+                        <input type="radio" name="status" id="complete"> <img src="images/icons/complete.png" width="69" height="75" alt=""></label>
+
+                <input type="button" name="addButton" id="addButton" value="Add+">
+
+            </form> <!-- closing form tag -->
+        </div> <!-- closing id tag for "add" -->
+            </div> <!-- closing id tag for "modal" -->
+        </div> <!-- closing id tag for "overlay" -->
+
+    </div> <!-- closing class tag for "content" -->
+
+
+<!-- jquery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!-- plugins -->
+
+<!-- main -->
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
+

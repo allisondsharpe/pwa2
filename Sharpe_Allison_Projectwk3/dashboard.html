@@ -1,0 +1,94 @@
+<!-- Name: Allison Sharpe -->
+<!-- Date: 05-04-15 -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title> Dashboard </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="css/dashboard.css?v=1">
+    <link rel="icon" href="images/icon.png">
+    <!-- end CSS-->
+
+</head>
+
+<body>
+  <div class="content"> <!-- opening div class for "content" -->
+
+      <div class="userid"> <!-- opening class tag for "user id" -->
+          <h4> Welcome User: </h4>
+      </div> <!-- closing class tag for "user id" -->
+
+      <form> <!-- opening form tag -->
+
+          <div class="signout"> <!-- opening class tag for "signout" -->
+            <label for="signout" class=".logout"></label>
+                <a href="#" style="text-decoration: none">
+                <input type="submit"id="signout" class="masterTooltip" title="Signout" value="Sign out"/></a>
+          </div> <!-- closing class tag for "signout" -->
+
+          <div class="account"> <!-- opening class tag for "account" -->
+            <label for="account" class=".account"></label>
+                <a href="#" style="text-decoration: none">
+                <input type="submit" id="account" class="masterTooltip" title="Your account" value="Account"/></a>
+          </div> <!-- closing class tag for "account" -->
+
+          <button id="signoutbtn"> Sign out </button>
+
+      </form> <!-- closing form tag -->
+
+
+      <h2> Welcome to Your Dashboard </h2>
+
+      <p> This is your dashboard area. Please select an item below to get started. </p>
+
+      <div id="accordion"> <!-- opening id tag for "accordion" -->
+        <ul id="tabs-nav">
+            <li> <a href="#projects">
+                <img src="images/icons/projects.png" width="80" height="67" class="projects"></a></li>
+            <li> <a href="#display">
+                <img src="images/icons/display.png" width="80" height="67" class="display"></a></li>
+            <li> <a href="#options">
+                <img src="images/icons/options.png" width="80" height="67" class="options"></a></li>
+        </ul>
+
+         <div id="tabs"> <!-- opening id tag for "tabs" -->
+              <p id="projects">
+                  Click here to view or edit your projects. <a href="#" style="text-decoration: none"><input type="submit" id="project" value="View Projects"/></a>
+              </p>
+              <p id="display">
+                  This feature will allow you to view other users who have put their projects on display, in case you need any ideas to help you get started.
+              </p>
+              <p id="options">
+                  This is where you will set up your account as well as your privacy settings.
+              </p>
+
+         </div> <!-- closing id tag for "tabs" -->
+      </div> <!-- closing id tag for "accordion" -->
+
+  </div>  <!-- closing div class for "content" -->
+
+
+<!-- jquery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- plugins -->
+
+<!-- main -->
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
+
+
