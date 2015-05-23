@@ -5,9 +5,12 @@
 
 (function($) {
 
+
 // login elements
 
+
     $('#submit').on('click', function(e){
+        e.preventDefault();
         var user = $('#username').val();
         var pass = $('#password').val();
         console.log("Hello password is working!!");
@@ -30,19 +33,26 @@
         });
     });
 
+
+
 // logout elements
+
+
 
     $('#signoutbtn').click(function(e) {
         e.preventDefault();
-        $.get('xhr/logout.php', function () {
-            window.location.assign('index.html')
-        });
+        $.get('xhr/logout.php', function() {
+            window.location.assign('signout.html')
+        })
 
     });
 
+
 // register elements
 
-    $('#register').click(function(){
+
+    $('#register').click(function(e){
+        e.preventDefault();
         var firstname= $('#firstname').val(),
             lastname= $('#lastname').val(),
             email= $('#email').val(),
@@ -75,14 +85,45 @@
 
     });
 
-// dynamic button for class "projects" - dashboard page
 
-$('#project').on('click', function(){
-    e.preventDefault();
-    window.location.assign('project.html');
-});
+// dynamic button for id "project" - dashboard page
+
+
+    $('#project').on('click', function(e){
+        e.preventDefault();
+        window.location.assign('project.html');
+    });
+
+
+// dynamic button for id "dashboardbtn" - projects page
+
+
+    $('#dashboardbtn').on('click', function(e){
+        e.preventDefault();
+        window.location.assign('dashboard.html');
+    });
+
+
+// dynamic button for id "sign in" - sign out page/landing page
+
+
+    $('#signIn').on('click', function(e){
+        e.preventDefault();
+        window.location.assign('index.html');
+    });
+
+
+// dynamic button for id "sign up" - sign out page/landing page
+
+
+    $('#signUp').on('click', function(e){
+        e.preventDefault();
+        window.location.assign('registration.html');
+    });
+
 
 // display username
+
 
 $.getJSON("xhr/check_login.php", function(data) {
     console.log(data);
@@ -92,23 +133,24 @@ $.getJSON("xhr/check_login.php", function(data) {
     });
 });
 
+
 // new projects
 
-$('#addButton').on('click', function() {
-    var name = $('projectName').val(),
-        desc = $('projectDescription').val(),
-        date = $('projectDueDate').val(),
-        status = $('input[name = "status"]:checked').prop("id");
+
+$('#addButton').on('click', function(e) {
+    e.preventDefault();
+    var projName = $('#projectName').val(),
+            projDesc = $('#projectDescription').val(),
+            projStatus = $('input[name = "status"]:checked').prop("id");
 
     $.ajax ({
         url: "xhr/new_project.php",
         type: "post",
         dataType: "json",
         data: {
-            projectName: name,
-            projectDescription: desc,
-            projectDueDate: date,
-            status: status
+            projectName: projName,
+            projectDescription: projDesc,
+            status: projStatus
         },
         success: function(response){
             console.log('testing');
@@ -123,7 +165,9 @@ $('#addButton').on('click', function() {
     });
 });
 
+
 // get projects
+
 
 var projects = function() {
     $.ajax({
@@ -138,23 +182,22 @@ var projects = function() {
                     var result = response.projects[i];
 
                     $(".projects").append(
-                        '<div style= "border: 1px solid #fff>' +
-                        "<input class='projectid' type='hidden' value='" + result.id + "'>" +
-                        "Project Name: " + result.projectName + "<br>" +
-                        "Project Description: " + result.projectDescription + "<br>" +
-                        "Project Status: " + result.status + "<br>"
+                        "<input class='projectid' type='hidden' value='' " + result.id + "'>" +
+                        "Project Name: " + result.projectName + "<br>" + "Project Description: " +
+                        result.projectDescription + "<br>" + "Project Status: " + result.status + "<br>"
                         + '<button class="deletebtn">Delete</button>'
                         + '<button class="editbtn">Edit</button>'
                         + '</div> <br>'
-                    );
+                );
                 }
-                $('.deletebtn').on('click', function (e) {
+                $('.deletebtn').on('click', function(e) {
+                e.preventDefault();
                     console.log('test delete');
                     $.ajax({
                         url: 'xhr/delete_project.php',
                         data: {
-                            projectID: result.id
-                        },
+                            projectID: result.id   //I got a bit confused at this part. I tried many options, but couldn't figure it out.
+                        },                         // This is what I had: result.id + result.projectName + result.projectDescription + result.status
                         type: 'POST',
                         dataType: 'json',
                         success: function (response) {
@@ -174,7 +217,9 @@ var projects = function() {
 };
 projects();
 
+
 // tooltip elements
+
 
     $(".masterTooltip").hover(function () {
         // hover over
@@ -194,7 +239,9 @@ projects();
         $('.tooltip')
     });
 
+
 // accordion elements
+
 
     $('#tabs p').hide().eq(0).show();
     $('#tabs p:not(:first)').hide();
@@ -210,7 +257,9 @@ projects();
         $('#tabs ' + clicked).fadeIn('fast');
     }).eq(0).addClass('current');
 
+
 // modal elements
+
 
     $(".modalClick").on("click", function (event) {
         event.preventDefault();
@@ -235,7 +284,9 @@ projects();
         $(this).fadeTo(100, 1);
     });
 
+
 // dialog elements
+
 
     $("#dialog").mouseover(function () {
         $(this).fadeTo(100, .2);

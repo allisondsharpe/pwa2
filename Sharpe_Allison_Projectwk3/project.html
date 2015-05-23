@@ -26,25 +26,17 @@
 <body>
     <div class="content"> <!-- opening div class for "content" -->
 
-        <h4 class="userid"> Welcome User: AllisonDSharpe </h4>
+        <div class="userid"></div>
 
-        <div class="dashboard"> <!-- opening class tag for "dashboard" -->
-            <label for="dashboard" class=".dashboard"></label>
-                <input type="submit" id="dashboard" class="masterTooltip" title="Your dashboard" value="Dashboard"/>
-                <a href="index.html" style="text-decoration: none"></a>
-        </div> <!-- closing class tag for "dashboard" -->
+        <form> <!-- opening form tag -->
 
-        <div class="account"> <!-- opening class tag for "account" -->
-            <label for="account" class=".account"></label>
-                <input type="submit" id="account" class="masterTooltip" title="Your account" value="Account"/>
-                <a href="index.html" style="text-decoration: none"></a>
-        </div> <!-- closing class tag for "account" -->
+            <button id="dashboardbtn" class="masterTooltip" title="Your dashboard"> Dashboard </button> <!-- opening and closing button tags for "sign out" -->
 
-        <div class="signout"> <!-- opening class tag for "signout" -->
-            <label for="signout" class=".logout"></label>
-                <input type="submit" id="signout" class="masterTooltip" title="Signout" value="Sign out"/>
-                <a href="index.html" style="text-decoration: none"></a>
-        </div> <!-- closing class tag for "signout" -->
+            <button id="account" class="masterTooltip" title="Your account"> Account </button> <!-- opening and closing button tags for "account" -->
+
+            <button id="signoutbtn" class="masterTooltip" title="Sign out"> Sign out </button> <!-- opening and closing button tags for "sign out" -->
+
+        </form> <!-- closing form tag -->
 
         <h2> Welcome to your dashboard </h2>
 
@@ -54,10 +46,9 @@
             <p><a href="#" class="modalClick" id="dialog">Add+</a></p>
         </div> <!-- closing class tag for "masterTooltip" -->
 
+        <h2> Current Projects </h2>
         <div class="projectList"> <!-- opening class tag for "project list" -->
-            <h2> Current Projects </h2>
             <div class="projects"> <!-- opening class tag for "projects" -->
-
             </div> <!-- closing class tag for "projects" -->
         </div> <!-- closing class tag for "project list" -->
 

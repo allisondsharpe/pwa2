@@ -26,25 +26,13 @@
 <body>
   <div class="content"> <!-- opening div class for "content" -->
 
-      <div class="userid"> <!-- opening class tag for "user id" -->
-          <h4> Welcome User: </h4>
-      </div> <!-- closing class tag for "user id" -->
+      <div class="userid"></div> <!-- opening and closing class tags for "user id" -->
 
       <form> <!-- opening form tag -->
 
-          <div class="signout"> <!-- opening class tag for "signout" -->
-            <label for="signout" class=".logout"></label>
-                <a href="#" style="text-decoration: none">
-                <input type="submit"id="signout" class="masterTooltip" title="Signout" value="Sign out"/></a>
-          </div> <!-- closing class tag for "signout" -->
+          <button id="account" class="masterTooltip" title="Your account"> Account </button> <!-- opening and closing button tags for "account" -->
 
-          <div class="account"> <!-- opening class tag for "account" -->
-            <label for="account" class=".account"></label>
-                <a href="#" style="text-decoration: none">
-                <input type="submit" id="account" class="masterTooltip" title="Your account" value="Account"/></a>
-          </div> <!-- closing class tag for "account" -->
-
-          <button id="signoutbtn"> Sign out </button>
+          <button id="signoutbtn" class="masterTooltip" title="Sign out"> Sign out </button> <!-- opening and closing button tags for "sign out" -->
 
       </form> <!-- closing form tag -->
 
@@ -56,16 +44,16 @@
       <div id="accordion"> <!-- opening id tag for "accordion" -->
         <ul id="tabs-nav">
             <li> <a href="#projects">
-                <img src="images/icons/projects.png" width="80" height="67" class="projects"></a></li>
+                <img src="images/icons/projects.png" width="80" height="67" class="masterTooltip" title="Projects"></a></li>
             <li> <a href="#display">
-                <img src="images/icons/display.png" width="80" height="67" class="display"></a></li>
+                <img src="images/icons/display.png" width="80" height="67" class="masterTooltip" title="Display"></a></li>
             <li> <a href="#options">
-                <img src="images/icons/options.png" width="80" height="67" class="options"></a></li>
+                <img src="images/icons/options.png" width="80" height="67" class="masterTooltip" title="Options"></a></li>
         </ul>
 
          <div id="tabs"> <!-- opening id tag for "tabs" -->
               <p id="projects">
-                  Click here to view or edit your projects. <a href="#" style="text-decoration: none"><input type="submit" id="project" value="View Projects"/></a>
+                  Click here to view or edit your projects. <a href="#" style="text-decoration: none"><input type="submit" class="masterTooltip" title="Your projects" id="project" value="View Projects"/></a>
               </p>
               <p id="display">
                   This feature will allow you to view other users who have put their projects on display, in case you need any ideas to help you get started.

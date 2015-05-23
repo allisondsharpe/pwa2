@@ -1,0 +1,60 @@
+/* Name: Allison Sharpe */
+/* Date: 05-21-15 */
+
+/* body elements */
+body {
+    width: 100%;
+    background: url("../images/bg");
+}
+
+/* class "content" elements */
+.content {
+    background: url("../images/content");
+    border: 1px solid #fff;
+    border-radius: 2em 2em;
+    padding: 10px 0.5%; /* 8px/16px */
+    width: 97.6%;
+}
+
+/* h2 elements */
+h2 {
+    margin-top: 20px;
+}
+
+/* h2 and paragraph elements */
+h2, p {
+    color: #fff;
+    text-align: center;
+}
+
+/* id "sign in" elements */
+#signIn {
+    float: left;
+    clear: left;
+    margin: 0px 0% 0px 43.75%; /* 650px/16px */
+}
+
+/* id "sign up" elements */
+#signUp {
+    float: right;
+    clear: right;
+    margin: 0px 43.75% 0px 0%; /* 700px/16px */
+}
+
+/* form and form input elements */
+form, form.input {
+    padding: 10px;
+}
+
+/* class "tooltip" elements */
+.tooltip {
+    padding: 10px;
+    background-color: #eee;
+    color: #666;
+    font-size: 16px;
+    float: right;
+    margin: -100px 25% 0px 0%; /* 400px/16px */
+    border: 1px solid;
+    border-radius: 1em;
+}
+
